@@ -1,0 +1,66 @@
+// light mode
+$color-background: #ffffff;
+$color-background-container: #f4f5fc;
+$color-font-disable: #626265;
+$color-font-active: #1f161e;
+$color-action: #3aaa35;
+
+
+//animation
+@keyframes slide-x {
+  0% {
+    opacity: 0;
+    transform: translateX(-60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-y {
+  0% {
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(-13%);
+  }
+  99% {
+    opacity: 1;
+    z-index: -1; /* Остается под объектом до самого конца */
+    transform: translateY(0);
+  }
+  100% {
+    z-index: 2; /* Выходит на передний план */
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: rotate(0deg);
+  }
+  12% {
+    transform: rotate(-10deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  36% {
+    transform: rotate(-10deg);
+  }
+  49% {
+    transform: rotate(0deg);
+  }
+  61% {
+    transform: rotate(10deg);
+  }
+  74% {
+    transform: rotate(20deg);
+  }
+  87% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

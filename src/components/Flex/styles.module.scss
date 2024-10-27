@@ -11,7 +11,8 @@ h3 {
 .row {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
+  text-align: center;
   flex-wrap: wrap;
   gap: 10px;
 }

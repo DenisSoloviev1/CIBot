@@ -1,39 +1,25 @@
 // light mode
-$color-background: #ffffff;
+$color-background: #e7f6e9;
 $color-background-container: #f4f5fc;
+$color-tag: #d9dade;
 $color-font-disable: #626265;
 $color-font-active: #1f161e;
 $color-action: #3aaa35;
-
+$color-delete: #e94242;
 
 //animation
-@keyframes slide-x {
+@keyframes slide-y {
   0% {
-    opacity: 0;
-    transform: translateX(-60%);
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(100%);
   }
   100% {
-    opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
-@keyframes slide-y {
-  0% {
-    z-index: -1;
-    opacity: 0;
-    transform: translateY(-13%);
-  }
-  99% {
-    opacity: 1;
-    z-index: -1; /* Остается под объектом до самого конца */
-    transform: translateY(0);
-  }
-  100% {
-    z-index: 2; /* Выходит на передний план */
-    transform: translateY(0);
-  }
-}
 
 @keyframes bounce {
   0% {

@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
-import { useAddTagStore } from "../ModalWindow/store";
+import { useModalWindow } from "../ModalWindow/store";
 import { Close } from "../../assets/svg";
 import { CustomButton } from "../CustomButton";
 
@@ -10,8 +10,8 @@ interface ModalWindowProps {
 }
 
 export const ModalWindow: React.FC<ModalWindowProps> = ({ children }) => {
-  const closeModal = useAddTagStore((state) => state.close);
-  const isOpen = useAddTagStore((state) => state.isOpen);
+  const closeModal = useModalWindow((state) => state.close);
+  const isOpen = useModalWindow((state) => state.isOpen);
 
   return (
     <div
@@ -19,7 +19,7 @@ export const ModalWindow: React.FC<ModalWindowProps> = ({ children }) => {
       onClick={closeModal}
     >
       <div className={styles.content} onClick={(e) => e.stopPropagation()}>
-        <CustomButton onClick={closeModal} type={"button"} className={"closeBig"}>
+        <CustomButton onClick={closeModal} className={"close"}>
           <Close />
         </CustomButton>
         {children}

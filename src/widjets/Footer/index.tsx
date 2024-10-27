@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./Footer.scss";
+import styles from "./styles.module.scss";
 
 export const Footer: React.FC = () => {
   return (
-    <footer>
-      
+    <footer className={styles.footer}>
+      <p>© powered by ВМО-11, 2024</p>
     </footer>
   );
 };

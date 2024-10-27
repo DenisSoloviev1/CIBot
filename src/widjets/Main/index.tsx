@@ -11,7 +11,7 @@ export const Main: React.FC = () => {
       <div className={styles.wrapper}>
         <ModalWindow>
           <Flex className={"row"}>
-            <a href="" >
+            <a href="https://www.centrinvest.ru/" target="_blanck">
               <Profile />
             </a>
             <h3> Ассистент Рубик</h3>
